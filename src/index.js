@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SimpleSlider from "./header";
 import * as serviceWorker from './serviceWorker';
+import Comment from "./comment";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+ReactDOM.render(
+    <div className='container'>
+        <SimpleSlider/>
+        <Comment />
+    </div>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

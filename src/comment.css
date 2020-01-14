@@ -1,0 +1,88 @@
+.textAndName {
+    margin: 50px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.textAndName input {
+    width: 580px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.textAndName textarea {
+    width: 580px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.userBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.userBtnContainer button {
+    width: 200px;
+    height: 50px;
+}
+
+.containerComment {
+    width: 100%;
+    background-color: #fff;
+    margin: 50px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0 20px 0 20px;
+    box-shadow: 0 0 10px 10px #6b6b6b;
+}
+
+.userNameText {
+    border-right: 1px solid #000;
+    width: 88%;
+    word-wrap: break-word;
+}
+
+.dateAndRemove {
+    position: relative;
+    padding-top: 30px;
+}
+
+.dateAndRemove strong {
+
+    font-size: 30px;
+    color: red;
+
+}
+
+.all_remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.all_remove .remove {
+    user-select: none;
+    font-size: 30px;
+    color: red;
+    display: inline-block;
+    transform: rotate(45deg) translateY(-4px);
+}
+
+.all_remove .remove2 {
+    user-select: none;
+    font-size: 30px;
+    color: red;
+    display: inline-block;
+    transform: rotate(-45deg) translateY(-4px);
+}
+
