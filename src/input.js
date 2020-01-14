@@ -3,6 +3,7 @@ import React, {useState} from "react";
 
 const Input = () => {
     const [value, setValue] = useState('');
+    let xxx = value;
 
 
     return(
@@ -10,9 +11,10 @@ const Input = () => {
         <input
             type="text"
             className='userName'
-            valueInput={value}
+            value={value}
             onChange={ev => {
                 setValue(ev.target.value);
+                console.log(xxx);
             }
             }
             placeholder='Введите Ваше имя'/>

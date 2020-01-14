@@ -19,11 +19,9 @@ class Comment extends React.Component{
         };
     };
 
-    getValueInput = (event) => {
-        this.setState({userName: event.target.value});
-        console.log(event)
-    };
-
+    getValueInput = () => {
+        
+    }
     componentDidUpdate(prevProps, prevState, snapshot) {
 
     }
@@ -34,8 +32,6 @@ class Comment extends React.Component{
         } else {
             let local = localStorage.getItem('comment')
             let comment = JSON.parse(local);
-            console.log(comment);
-
             this.setState({comment});
         }
 
@@ -57,7 +53,7 @@ class Comment extends React.Component{
 
     addComment = () => {
         const comment = this.state.comment;
-        console.log(this.state.userName);
+        console.log(this.getValueInput());
 
         if(this.onChangeInput === '' || this.state.userText === ''){
             alert('Введите значения')
@@ -136,13 +132,9 @@ class Comment extends React.Component{
                     <div className='container'>
 
                         <div className='textAndName'>
-                            <Input
-                                value={this.state.userName}
-                                onChange = {ev => {
-                                    this.getValueInput(ev.target.value)
-                                }}
 
-                            />
+                            
+                            <Input useContex={} />
 
 
                             <textarea
