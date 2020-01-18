@@ -1,26 +1,21 @@
-import React, {useState} from "react";
+import React from "react";
 
-
-const Input = () => {
-    const [value, setValue] = useState('');
-    let xxx = value;
-
-
-    return(
-        <>
+class Input extends React.Component {
+  render() {
+    return (
+      <>
         <input
-            type="text"
-            className='userName'
-            value={value}
-            onChange={ev => {
-                setValue(ev.target.value);
-                console.log(xxx);
-            }
-            }
-            placeholder='Введите Ваше имя'/>
-            </>
-    )
-
-};
+          type="text"
+          className="userName"
+          inputValue={this.props.inputValue}
+          onChange={ev => {
+            this.props.inputValue(ev.target.value);
+          }}
+          placeholder="Введите Ваше имя"
+        />
+      </>
+    );
+  }
+}
 
 export default Input;
